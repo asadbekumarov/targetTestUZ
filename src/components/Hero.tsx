@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 bg-[length:400%_400%] animate-gradient-motion flex items-center">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 py-12 font-[Poppins]">
-        <div className="text-center pt-10 sm:pt-20">
+        <div className="text-center mt-14 pt-10 sm:pt-20">
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
             Bilimingizni sinab ko‘ring!
           </h1>
