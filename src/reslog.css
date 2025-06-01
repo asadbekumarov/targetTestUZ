@@ -12,24 +12,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
-
 .wrapper {
     position: relative;
     width: 750px;
     height: 450px;
     background: var(--white);
-    /* border: 1px solid var(--black); */
     border-radius: 10px;
     box-shadow: 0 0 10px var(--black);
     overflow: hidden;
 }
 
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .wrapper .form-box {
     position: absolute;
@@ -314,4 +312,83 @@ form .linkTxt {
 .wrapper.active .rotate-bg2 {
     transform: rotate(-11deg) skewY(-40deg);
     transition-delay: 0.5s;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+    }
+
+    .wrapper .form-box,
+    .wrapper .info-text {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 20px 30px;
+        text-align: center;
+    }
+
+    .wrapper .info-text h2,
+    .wrapper .info-text p {
+        text-align: center !important;
+    }
+
+    .rotate-bg,
+    .rotate-bg2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-box h2 {
+        font-size: 24px;
+    }
+
+    .form-box .input-box {
+        margin: 20px 0;
+    }
+
+    .wrapper .info-text h2 {
+        font-size: 28px;
+    }
+
+    .wrapper .info-text p {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .linkTxt p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-box .input-box input {
+        font-size: 14px;
+    }
+
+    .form-box .input-box label {
+        font-size: 14px;
+    }
+
+    .form-box .input-box i {
+        font-size: 16px;
+    }
+
+    form button {
+        font-size: 13px;
+        height: 38px;
+    }
+
+    .wrapper {
+        border-radius: 0;
+        box-shadow: none;
+    }
 }
